@@ -1,0 +1,1 @@
+This will be the first HTML project following Odin Course
