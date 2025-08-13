@@ -1,0 +1,85 @@
+body {
+    background-color: #1f2937;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-flex {
+    display: flex;
+    align-items: center;
+}
+
+.main-link {
+    display: flex;
+    margin-left: auto;
+}
+
+.main-link a {
+    font-size: 25px;
+    padding: 10px;
+    color: rgb(38, 0, 253);
+}
+
+.second-flex {
+    display: flex;
+    flex-direction: row;
+    color: antiquewhite;
+}
+
+.third-flex {
+    align-items: center;
+    color: #721609;
+    background-color: black;
+}
+
+.heroes-pic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    color: antiquewhite;
+}
+
+.heroes-pic img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #721609;
+}
+
+.quote {
+    background-color: rgb(68, 67, 67);
+    color: rgb(231, 97, 20);
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 200px;
+    padding: 10px 80px;
+    gap: 5px;
+    background-color: rgb(161, 3, 3);
+}
+
+.sign-up-info {
+    text-align: left;
+}
+
+.button {
+    width: 200px;
+    height: 30px;
+}
+
+.copyright {
+    background-color: #464849;
+    margin: 50px;
+}

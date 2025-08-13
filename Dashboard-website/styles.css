@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    width: 30px;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 60px;
+    background-image: linear-gradient(blue, violet, white);
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .main-content {
+    left: 180px;
+    width: calc(100% - 20px);
+}
+
+.sidebar.active {
+    width: 175px;
+}
+
+.sidebar #dashbtn {
+    cursor: pointer;
+}
+
+.sidebar #dashbtn {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar #dashbtn .main-tooltip {
+    position: absolute;
+    left: 100px;
+    top: 2.5%;
+    transform: translate(-45%, -50%);
+    box-shadow: 0 0.5rem 0.8rem hsl(0, 0%, 77%);
+    border-radius: .6rem;
+    padding: 0 .5rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar #dashbtn:hover .main-tooltip {
+    opacity: 1;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    font-weight: bold;
+    color: black;
+}
+
+.sidebar ul li a:hover {
+    background-color: hsl(0, 0%, 91%);
+    color: black;
+}
+
+.sidebar ul li a:active {
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+}
+
+.sidebar .dash-item {
+    opacity: 0;
+}
+
+.sidebar.sidebar.active .dash-item {
+    opacity: 1;
+    margin-left: 10px;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translate(-45%, -50%);
+    box-shadow: 0 0.5rem 0.8rem hsl(0, 0%, 88%);
+    border-radius: .6rem;
+    padding: 0 .5rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.sidebar ul li:hover .tooltip{
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.sidebar.sidebar.active #dashbtn .main-tooltip {
+    display: none;
+}
+
+.main-content {
+    position: relative;
+    background-color: white;
+    min-height: 100vh;
+    top: 0;
+    left: 60px;
+    transition: all 0.5s ease;
+    width: calc(100% - 60px);
+    padding-top: 0.5rem;
+}
+
+.main-content .header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    justify-content: right;
+    gap: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;    
+}
+
+.main-content .header .rightheader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-content .header .leftheader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.headsearch {
+    width: 25rem;
+    border-radius: 20rem;
+    background-color: hsl(0, 0%, 95%);
+    border-style:none;
+    box-shadow: 0 0.1rem 0.1rem hsl(0, 0%, 39%);
+}
+
+.main-content .header .searchicon {
+    width: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.main-content .header .mypicture {
+    width: 40px;
+    border-radius: 100%;
+    box-shadow: 0 0.5rem 0.8rem hsl(0, 0%, 83%);
+}
+
+.main-content .header ul li {
+    list-style-type: none;
+}
+
+.main-content .header .myname {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.headertwo {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;    
+}
+
+.mypicture2 {
+    width: 60px;
+    border-radius: 100%;
+    box-shadow: 0 0.5rem 0.5rem hsl(0, 0%, 77%);
+}
+
+.greeting {
+    font-size: smaller;
+}
+
+.pname {
+    font-weight: bold;
+}
+
+.usergreeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.headbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    gap: 2rem;
+}
+
+.hbutton {
+    padding: 0.8rem;
+    border-radius: 25rem;
+    width: 30rem;
+    background-color: hsl(216, 100%, 74%);
+    font-weight: bold;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+.hbutton:hover {
+    background-color: hsl(216, 100%, 66%);
+}
+.hbutton:active {
+    background-color: hsl(216, 86%, 86%);
+}
+
+
+.projects {
+    display: flex;
+    background-color: hsl(198, 37%, 89%);
+    margin: 0;
+    height: 75vh;
+    box-shadow: 0 0 5px 0.2px black;
+    padding: 2rem;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+}
+
+.articleplace {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+
+}
+
+.article {
+    height: 18vh;
+    width: 40vh;
+    background-color: white;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 0.5rem 0.5rem hsl(0, 0%, 77%);
+    cursor: pointer;
+}
+
+.article:hover {
+    transform: scale(1.1);
+}
+
+.announcement {
+    display: flex;
+    height: 25vh;
+    width: 40vh;
+    background-color: white;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 0.5rem 0.5rem hsl(0, 0%, 77%);
+    cursor: pointer;
+}
+
+.contentheader {
+    font-weight: bold;
+}

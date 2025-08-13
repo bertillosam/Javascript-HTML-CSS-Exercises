@@ -1,0 +1,23 @@
+#countLabel{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#buttonContainer {
+    text-align: center;
+}
+.buttons {
+    padding: 10px 20px;
+    font-size: 2em;
+    color:bisque;
+    background-color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.25s; /* For delay hovering of cursor*/
+
+}
+.buttons:hover {
+    background-color: rgb(49, 45, 45);
+}
